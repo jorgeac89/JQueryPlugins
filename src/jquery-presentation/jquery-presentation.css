@@ -1,0 +1,64 @@
+html {
+	overflow-x: hidden;
+}
+
+.presentation-3d{
+	perspective: 300px;
+}
+
+.presentation-3d > .presentation-element{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	font-size: 55px;
+	font-weight: bold;
+	text-shadow: 3px 3px 10px #555555;
+	padding:50px;
+}
+
+.show-in{
+	animation: show-in-Z .8s;
+}
+
+.show-out{
+	animation: show-out-Z .8s;
+	opacity: 0;
+}
+
+@keyframes show-in-Z{
+	0%{
+		opacity: 0;
+		-webkit-transform: translateZ(100px);
+		-moz-transform: translateZ(100px);
+		-ms-transform: translateZ(100px);
+		-o-transform: translateZ(100px);
+		transform: translateZ(100px);
+	}
+	100%{
+		opacity: 1;
+		-webkit-transform: translateZ(0);
+		-moz-transform: translateZ(0);
+		-ms-transform: translateZ(0);
+		-o-transform: translateZ(0);
+		transform: translateZ(0);
+	}
+}
+
+@keyframes show-out-Z{
+	0%{
+		opacity: 1;
+		-webkit-transform: translateZ(0);
+		-moz-transform: translateZ(0);
+		-ms-transform: translateZ(0);
+		-o-transform: translateZ(0);
+		transform: translateZ(0);
+	}
+	100%{
+		opacity: 0;
+		-webkit-transform: translateZ(-100px);
+		-moz-transform: translateZ(-100px);
+		-ms-transform: translateZ(-100px);
+		-o-transform: translateZ(-100px);
+		transform: translateZ(-100px);
+	}
+}

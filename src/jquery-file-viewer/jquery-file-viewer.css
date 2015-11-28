@@ -1,0 +1,18 @@
+.file-viewer {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0px;
+    left: 0px;
+    z-index: 1050;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.file-viewer > .file-viewer-file {
+    width: 80%;
+    height: 95%;
+    border-radius: 4px;
+}
